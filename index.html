@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>BLAM Audio</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="./assets/img/logo.png" alt="BLAM Audio">
+                <span>Driven by passion</span>
+            </a>
+
+            <div class="burger" onclick="this.classList.toggle('_open'); document.querySelector('body').classList.toggle('_locked')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li class="_arrow">
+                        <a href="#">Продукция</a>
+                        <span class="icon" onclick="this.parentElement.classList.toggle('_open')">
+                            <svg class="ct-icon toggle-icon-1" width="15" height="15" viewBox="0 0 15 15"><path d="M3.9,5.1l3.6,3.6l3.6-3.6l1.4,0.7l-5,5l-5-5L3.9,5.1z" fill="#f5f5f5"></path></svg>
+                        </span>
+                        <ul>
+                            <li><a href="#">Tweeters</a></li>
+                            <li><a href="#">Woofers</a></li>
+                            <li><a href="#">Sebwoofers</a></li>
+                            <li><a href="#">Kits</a></li>
+                            <li><a href="#">Amplifiers</a></li>
+                        </ul>
+                    </li>
+                    <li class="_arrow">
+                        <a href="#">Готовые решения</a>
+                        <span class="icon" onclick="this.parentElement.classList.toggle('_open')">
+                            <svg class="ct-icon toggle-icon-1" width="15" height="15" viewBox="0 0 15 15"><path d="M3.9,5.1l3.6,3.6l3.6-3.6l1.4,0.7l-5,5l-5-5L3.9,5.1z" fill="#f5f5f5"></path></svg>
+                        </span>
+                        <ul>
+                            <li><a href="#">BMW</a></li>
+                            <li><a href="#">Mersedec</a></li>
+                            <li><a href="#">Tesla</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">История компании</a></li>
+                    <li><a href="#">Где купить</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a class="socila__item" href="#">vk</a>
+                <a class="socila__item" href="#">i</a>
+                <a class="socila__item" href="#">fb</a>
+            </div>
+            <div class="search">
+                <svg aria-hidden="true" width="15" height="15" viewBox="0 0 15 15">
+                    <path
+                        d="M14.8,13.7L12,11c0.9-1.2,1.5-2.6,1.5-4.2c0-3.7-3-6.8-6.8-6.8S0,3,0,6.8s3,6.8,6.8,6.8c1.6,0,3.1-0.6,4.2-1.5l2.8,2.8c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C15.1,14.5,15.1,14,14.8,13.7z M1.5,6.8c0-2.9,2.4-5.2,5.2-5.2S12,3.9,12,6.8S9.6,12,6.8,12S1.5,9.6,1.5,6.8z"
+                        fill="232323">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main-banner">
+            <div class="main-banner__background"></div>
+            <div class="main-banner__wrapper">
+                <div class="contaier">
+                    <div class="main-banner__title">
+                        <div class="main-banner__title-bg">
+                            <img src="./assets/img/title-bg.png" alt="">
+                        </div>
+                        <h1>And if we made your daily journeys into sensory journeys</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog-section">
+            <div class="container">
+                <h2 class="section-title">Discover our car audio products</h2>
+                <div class="section-text">
+                    <p><b>BLAM is a French manufacturer specialized in the design of high quality audio
+                            equipment.</b>Audio equipment that integrates the different moments of life of its users
+                        with the sole objective of providing unique listening sensations. Because our vehicle is not
+                        only a simple transportation tool, it makes us travel on the roads and through our emotions.
+                        Through the choice of our music that lulls us during your journeys. BLAM and its teams design
+                        products adapted to your vehicles and capable of enhancing your journeys. Get the perfect sound
+                        no matter what your musical style. BLAM offers complete equipment lines structured in 5 distinct
+                        ranges according to your musical expectations.</p>
+                </div>
+                <div class="catalog-section__wrapper">
+                    <a class="catalog-section__item">
+                        <div class="catalog-section__item-img">
+                            <img src="./assets/img/catalog/tweeter.jpg" alt="Tweeters">
+                        </div>
+                        <div class="catalog-section__item-name">Tweeters</div>
+                    </a>
+                    <a class="catalog-section__item">
+                        <div class="catalog-section__item-img">
+                            <img src="./assets/img/catalog/woofer.jpg" alt="Woofers">
+                        </div>
+                        <div class="catalog-section__item-name">Woofers</div>
+                    </a>
+                    <a class="catalog-section__item">
+                        <div class="catalog-section__item-img">
+                            <img src="./assets/img/catalog/subwoofer.jpg" alt="Sebwoofers">
+                        </div>
+                        <div class="catalog-section__item-name">Sebwoofers</div>
+                    </a>
+                    <a class="catalog-section__item">
+                        <div class="catalog-section__item-img">
+                            <img src="./assets/img/catalog/kits.jpg" alt="Kits">
+                        </div>
+                        <div class="catalog-section__item-name">Kits</div>
+                    </a>
+                    <a class="catalog-section__item">
+                        <div class="catalog-section__item-img">
+                            <img src="./assets/img/catalog/amplifiers.jpg" alt="Amplifiers">
+                        </div>
+                        <div class="catalog-section__item-name">Amplifiers</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="resellers">
+            <div class="container">
+                <div class="resellers__wrapper">
+                    <h2 class="section-title">Looking for Blam audio products? Find our resellers and distributors
+                        around the world.</h2>
+                    <div class="resellers__button">
+                        <a href="#"><span>Где купить</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="copy">© 2023 Blam Audio - Driven by passion</div>
+    </footer>
+</body>
+
+</html>
