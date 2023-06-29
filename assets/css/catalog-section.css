@@ -1,0 +1,102 @@
+.catalog-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.catalog-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.catalog-section .section-text {
+    max-width: 784px;
+    margin: 0 auto;
+    margin-bottom: 65px;
+}
+
+.catalog-section__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px 25px;
+}
+
+.catalog-section__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    width: calc(50% - (25px / 2));
+}
+
+.catalog-section__item-img {
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.catalog-section__item:hover .catalog-section__item-img {
+    filter: brightness(130%) contrast(100%) saturate(130%) blur(0px) hue-rotate(0deg);
+    animation-name: elementor-animation-bob-float, elementor-animation-bob;
+    animation-duration: .3s, 1.5s;
+    animation-delay: 0s, .3s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal, alternate;
+}
+
+@keyframes elementor-animation-bob {
+    0% {
+        transform: translateY(-8px)
+    }
+
+    50% {
+        transform: translateY(-4px)
+    }
+
+    100% {
+        transform: translateY(-8px)
+    }
+}
+
+@keyframes elementor-animation-bob-float {
+    100% {
+        transform: translateY(-8px)
+    }
+}
+
+.catalog-section__item-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media (min-width: 690px) {
+    .catalog-section__wrapper {
+        gap: 25px 50px;
+    }
+
+    .catalog-section__item {
+        width: calc(50% - (50px / 2));
+    }
+}
+
+@media (min-width: 768px) {
+    .catalog-section__wrapper {
+        flex-wrap: nowrap;
+        gap: 25px;
+    }
+
+    .catalog-section__item {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1170px) {
+    .catalog-section__wrapper {
+        gap: 50px;
+    }
+}
