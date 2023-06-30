@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/main.css">
     <title>BLAM Audio</title>
 </head>
@@ -17,7 +18,8 @@
                 <span>Driven by passion</span>
             </a>
 
-            <div class="burger" onclick="this.classList.toggle('_open'); document.querySelector('body').classList.toggle('_locked')">
+            <div class="burger"
+                onclick="this.classList.toggle('_open'); document.querySelector('body').classList.toggle('_locked')">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -28,7 +30,9 @@
                     <li class="_arrow">
                         <a href="#">Продукция</a>
                         <span class="icon" onclick="this.parentElement.classList.toggle('_open')">
-                            <svg class="ct-icon toggle-icon-1" width="15" height="15" viewBox="0 0 15 15"><path d="M3.9,5.1l3.6,3.6l3.6-3.6l1.4,0.7l-5,5l-5-5L3.9,5.1z" fill="#f5f5f5"></path></svg>
+                            <svg class="ct-icon toggle-icon-1" width="15" height="15" viewBox="0 0 15 15">
+                                <path d="M3.9,5.1l3.6,3.6l3.6-3.6l1.4,0.7l-5,5l-5-5L3.9,5.1z" fill="#f5f5f5"></path>
+                            </svg>
                         </span>
                         <ul>
                             <li><a href="#">Tweeters</a></li>
@@ -41,7 +45,9 @@
                     <li class="_arrow">
                         <a href="#">Готовые решения</a>
                         <span class="icon" onclick="this.parentElement.classList.toggle('_open')">
-                            <svg class="ct-icon toggle-icon-1" width="15" height="15" viewBox="0 0 15 15"><path d="M3.9,5.1l3.6,3.6l3.6-3.6l1.4,0.7l-5,5l-5-5L3.9,5.1z" fill="#f5f5f5"></path></svg>
+                            <svg class="ct-icon toggle-icon-1" width="15" height="15" viewBox="0 0 15 15">
+                                <path d="M3.9,5.1l3.6,3.6l3.6-3.6l1.4,0.7l-5,5l-5-5L3.9,5.1z" fill="#f5f5f5"></path>
+                            </svg>
                         </span>
                         <ul>
                             <li><a href="#">BMW</a></li>
@@ -100,7 +106,7 @@
                         ranges according to your musical expectations.</p>
                 </div>
                 <div class="catalog-section__wrapper">
-                   <!--  <a class="catalog-section__item">
+                    <!--  <a class="catalog-section__item">
                         <div class="catalog-section__item-img">
                             <img src="./assets/img/catalog/tweeter.jpg" alt="Tweeters">
                         </div>
@@ -125,7 +131,7 @@
                         </div>
                         <div class="catalog-section__item-name">Sebwoofers</div>
                     </a>
-                    
+
                     <!-- <a class="catalog-section__item">
                         <div class="catalog-section__item-img">
                             <img src="./assets/img/catalog/amplifiers.jpg" alt="Amplifiers">
@@ -135,6 +141,69 @@
                 </div>
             </div>
         </section>
+
+        <section class="series swiper" id="series">
+            <div class="swiper-wrapper">
+                <div class="series__item swiper-slide" v-for="item in items">
+                    <div class="series__item-bg">
+                        <img :src="item.bg" alt="">
+                    </div>
+                    <div class="series__item-wrapper">
+                        <div class="series__item-img">
+                            <img :src="item.img" alt="">
+                        </div>
+                        <div class="series__item-name">{{item.name}}</div>
+                        <div class="series__item-description">{{item.description}}</div>
+                        <a href="#" class="series__item-btn"><span>Read more</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </section>
+        <script>
+            const series = {
+                data() {
+                    return {
+                        items: {
+                            0: {
+                                name: 'Multix',
+                                bg: '../img/series/multix-bg.webp',
+                                img: '../img/series/multix.png',
+                                description: 'Perfect sound is the result of equipment made of unique materials.'
+                            },
+                            1: {
+                                name: 'Signature',
+                                bg: '../img/series/signature-bg.webp',
+                                img: '../img/series/signature.png',
+                                description: 'A whole range imagined, manufactured and assembled in France in our premises.'
+                            },
+                            2: {
+                                name: 'Live',
+                                bg: '../img/series/live-bg.webp',
+                                img: '../img/series/live.png',
+                                description: 'The LIVE range is the perfect tuning of bass, treble and different frequencies to give you the right sound for your musical style.'
+                            },
+                            3: {
+                                name: 'Relax',
+                                bg: '../img/series/relax-bg.webp',
+                                img: '../img/series/relax.png',
+                                description: 'The detail, the linear, the removal of all parasites.'
+                            },
+                            4: {
+                                name: 'Express',
+                                bg: '../img/series/express-bg.webp',
+                                img: '../img/series/express.png',
+                                description: 'Rediscovering music means accepting change.'
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        </script>
 
         <section class="resellers">
             <div class="container">
@@ -152,6 +221,21 @@
     <footer class="footer">
         <div class="copy">© 2023 Blam Audio - Driven by passion</div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        Vue.createApp(series).mount('#series');
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+    </script>
 </body>
 
 </html>

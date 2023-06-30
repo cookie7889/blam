@@ -33,6 +33,7 @@
     display: flex;
     overflow: hidden;
     border-radius: 10px;
+    transition: .3s ease;
 }
 
 .catalog-section__item:hover .catalog-section__item-img {
